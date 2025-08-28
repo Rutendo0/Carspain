@@ -21,6 +21,8 @@ Design inspiration: Mazda websites (mazda.com/en and mazdausa.com) for sophistic
 - **Content Strategy**: Updated all sections with professional, corporate messaging
 - **Visual Improvements**: Removed blur effects, enhanced image visibility, section dividers
 - **Professional Tone**: All text rewritten for B2B professional audience
+- **Typography Enhancement**: Added Inter and Roboto fonts, improved text contrast and readability
+- **Color Refinement**: Enhanced metallic gradient with gold accents, improved text colors for better contrast
 
 # System Architecture
 

@@ -23,16 +23,16 @@ export default function HeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Professional tagline */}
-        <div className="premium-text text-primary text-lg mb-4 tracking-wider uppercase">
+        <div className="professional-subtitle text-lg mb-6">
           Premium Automotive Solutions
         </div>
         
-        <h1 className="text-6xl md:text-8xl bold-impact mb-6 leading-tight">
+        <h1 className="text-6xl md:text-8xl bold-impact mb-8 leading-tight text-foreground">
           PROFESSIONAL GRADE<br />
           <span className="metallic-gradient">AUTOMOTIVE PARTS</span>
         </h1>
         
-        <p className="text-xl md:text-2xl premium-text text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl premium-text enhanced-text mb-12 max-w-4xl mx-auto leading-relaxed">
           Leading supplier of high-performance automotive components and accessories. 
           Trusted by professionals and enthusiasts worldwide for quality, reliability, and exceptional service.
         </p>
@@ -61,19 +61,19 @@ export default function HeroSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           <div className="text-center glass-effect p-6 rounded-2xl" data-testid="stat-parts">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">15K+</div>
-            <div className="text-muted-foreground premium-text uppercase tracking-wider text-sm">Premium Parts</div>
+            <div className="stats-text uppercase tracking-wider">Premium Parts</div>
           </div>
           <div className="text-center glass-effect p-6 rounded-2xl" data-testid="stat-brands">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">800+</div>
-            <div className="text-muted-foreground premium-text uppercase tracking-wider text-sm">Trusted Brands</div>
+            <div className="stats-text uppercase tracking-wider">Trusted Brands</div>
           </div>
           <div className="text-center glass-effect p-6 rounded-2xl" data-testid="stat-customers">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">100K+</div>
-            <div className="text-muted-foreground premium-text uppercase tracking-wider text-sm">Satisfied Drivers</div>
+            <div className="stats-text uppercase tracking-wider">Satisfied Drivers</div>
           </div>
           <div className="text-center glass-effect p-6 rounded-2xl" data-testid="stat-support">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">24/7</div>
-            <div className="text-muted-foreground premium-text uppercase tracking-wider text-sm">Expert Support</div>
+            <div className="stats-text uppercase tracking-wider">Expert Support</div>
           </div>
         </div>
 

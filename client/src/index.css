@@ -1,23 +1,24 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: hsl(210, 40%, 2%);
-  --foreground: hsl(210, 40%, 98%);
+  --foreground: hsl(0, 0%, 95%);
   --card: hsl(210, 40%, 8%);
-  --card-foreground: hsl(210, 40%, 98%);
+  --card-foreground: hsl(0, 0%, 95%);
   --popover: hsl(210, 40%, 8%);
-  --popover-foreground: hsl(210, 40%, 98%);
+  --popover-foreground: hsl(0, 0%, 95%);
   --primary: hsl(0, 85%, 60%);
-  --primary-foreground: hsl(210, 40%, 98%);
+  --primary-foreground: hsl(0, 0%, 100%);
   --secondary: hsl(210, 40%, 15%);
-  --secondary-foreground: hsl(210, 40%, 98%);
-  --muted: hsl(210, 40%, 10%);
-  --muted-foreground: hsl(210, 40%, 65%);
+  --secondary-foreground: hsl(0, 0%, 95%);
+  --muted: hsl(210, 40%, 6%);
+  --muted-foreground: hsl(0, 0%, 75%);
   --accent: hsl(210, 40%, 20%);
-  --accent-foreground: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(0, 0%, 95%);
   --destructive: hsl(356.3033, 90.5579%, 54.3137%);
   --destructive-foreground: hsl(0, 0%, 100%);
   --border: hsl(210, 40%, 18%);
@@ -29,14 +30,15 @@
   --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
   --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
   --sidebar: hsl(210, 40%, 8%);
-  --sidebar-foreground: hsl(210, 40%, 98%);
+  --sidebar-foreground: hsl(0, 0%, 95%);
   --sidebar-primary: hsl(0, 85%, 60%);
-  --sidebar-primary-foreground: hsl(210, 40%, 98%);
+  --sidebar-primary-foreground: hsl(0, 0%, 100%);
   --sidebar-accent: hsl(210, 40%, 20%);
-  --sidebar-accent-foreground: hsl(210, 40%, 98%);
+  --sidebar-accent-foreground: hsl(0, 0%, 95%);
   --sidebar-border: hsl(210, 40%, 18%);
   --sidebar-ring: hsl(0, 85%, 60%);
-  --font-sans: Inter, system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Roboto', 'Inter', system-ui, sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
   --radius: 0.5rem;
@@ -77,24 +79,28 @@
 
 @layer utilities {
   .metallic-gradient {
-    background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #f87171 100%);
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 30%, #f59e0b 60%, #eab308 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 2px 4px rgba(220, 38, 38, 0.3));
   }
 
   .chrome-button {
     background: linear-gradient(145deg, #dc2626, #b91c1c);
-    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: white;
     border: none;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
 
   .chrome-button:hover {
     background: linear-gradient(145deg, #b91c1c, #991b1b);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(220, 38, 38, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
   }
 
   .automotive-card {
@@ -118,14 +124,44 @@
   }
 
   .premium-text {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.5px;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
   }
 
   .bold-impact {
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-family: var(--font-heading);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .accent-text {
+    color: #f59e0b;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+  }
+
+  .professional-subtitle {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: hsl(0, 85%, 65%);
+  }
+
+  .enhanced-text {
+    color: hsl(0, 0%, 90%);
+    line-height: 1.7;
+  }
+
+  .stats-text {
+    color: hsl(0, 0%, 85%);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
   }
 
   .glass-effect {

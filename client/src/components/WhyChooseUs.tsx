@@ -24,13 +24,13 @@ export default function WhyChooseUs() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <div className="premium-text text-primary text-lg mb-4 tracking-wider uppercase">
+          <div className="professional-subtitle text-lg mb-6">
             Industry Leadership
           </div>
-          <h2 className="text-5xl md:text-6xl bold-impact mb-6">
+          <h2 className="text-5xl md:text-6xl bold-impact mb-8 text-foreground">
             TRUSTED BY <span className="metallic-gradient">PROFESSIONALS</span>
           </h2>
-          <p className="text-xl premium-text text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl premium-text enhanced-text max-w-4xl mx-auto leading-relaxed">
             Over a decade of excellence in automotive parts distribution. Our commitment to quality, 
             service, and customer satisfaction has established us as a leader in the industry.
           </p>
@@ -46,7 +46,7 @@ export default function WhyChooseUs() {
               <div className="text-primary text-5xl mb-8 transition-transform duration-300 group-hover:scale-110">
                 <i className={feature.icon}></i>
               </div>
-              <h3 className="text-2xl bold-impact mb-6 uppercase tracking-wide">{feature.title}</h3>
+              <h3 className="text-2xl font-heading font-bold mb-6 uppercase tracking-wide text-foreground">{feature.title}</h3>
               <p className="premium-text text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>

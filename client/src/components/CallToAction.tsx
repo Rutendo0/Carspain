@@ -27,11 +27,11 @@ export default function CallToAction() {
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="premium-text text-white/90 text-lg mb-6 tracking-wider uppercase">
+        <div className="text-lg mb-8 font-medium tracking-widest uppercase text-white/90">
           Ready to Get Started?
         </div>
         
-        <h2 className="text-5xl md:text-7xl bold-impact text-white mb-8 leading-tight">
+        <h2 className="text-5xl md:text-7xl bold-impact text-white mb-10 leading-tight">
           EXPERIENCE<br />
           PROFESSIONAL SERVICE
         </h2>

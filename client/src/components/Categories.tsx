@@ -51,13 +51,13 @@ export default function Categories() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <div className="premium-text text-primary text-lg mb-4 tracking-wider uppercase">
+          <div className="professional-subtitle text-lg mb-6">
             Product Categories
           </div>
-          <h2 className="text-5xl md:text-6xl bold-impact mb-6">
+          <h2 className="text-5xl md:text-6xl bold-impact mb-8 text-foreground">
             COMPREHENSIVE <span className="metallic-gradient">AUTOMOTIVE SOLUTIONS</span>
           </h2>
-          <p className="text-xl premium-text text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl premium-text enhanced-text max-w-4xl mx-auto leading-relaxed">
             Extensive inventory of premium automotive components from leading manufacturers. 
             Professional-grade parts engineered for superior performance, durability, and reliability.
           </p>
@@ -84,7 +84,7 @@ export default function Categories() {
                 <i className={category.icon}></i>
               </div>
               
-              <h3 className="text-2xl bold-impact mb-3 uppercase tracking-wide">{category.name}</h3>
+              <h3 className="text-2xl font-heading font-bold mb-3 uppercase tracking-wide text-foreground">{category.name}</h3>
               <p className="premium-text text-muted-foreground mb-6 leading-relaxed">{category.description}</p>
               
               <div className="text-primary font-semibold uppercase tracking-wider text-sm group-hover:text-foreground transition-colors flex items-center justify-center gap-2">
