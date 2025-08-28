@@ -77,7 +77,6 @@ export default function Categories() {
                   alt={category.alt}
                   className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110" 
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
               </div>
               
               <div className="text-primary text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">

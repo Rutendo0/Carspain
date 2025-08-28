@@ -23,6 +23,7 @@ Design inspiration: Mazda websites (mazda.com/en and mazdausa.com) for sophistic
 - **Professional Tone**: All text rewritten for B2B professional audience
 - **Typography Enhancement**: Added Inter and Roboto fonts, improved text contrast and readability
 - **Color Refinement**: Enhanced metallic gradient with gold accents, improved text colors for better contrast
+- **Image Clarity Enhancement**: Completely removed all blur effects and image overlays for crystal clear visuals
 
 # System Architecture
 

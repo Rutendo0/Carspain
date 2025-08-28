@@ -18,10 +18,9 @@ export default function HeroSection() {
           alt="Luxury sports car showcasing premium automotive engineering" 
           className="w-full h-full object-cover" 
         />
-        <div className="hero-overlay absolute inset-0"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-black/20 backdrop-blur-none rounded-3xl py-20">
         {/* Professional tagline */}
         <div className="professional-subtitle text-lg mb-6">
           Premium Automotive Solutions

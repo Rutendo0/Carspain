@@ -11,7 +11,7 @@ export default function CallToAction() {
 
   return (
     <section className="py-24 bg-gradient-to-br from-primary via-red-600 to-red-700 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0 opacity-60">
         <img 
           src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" 
           alt="High-performance sports car showcasing automotive excellence" 

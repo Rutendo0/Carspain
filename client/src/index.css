@@ -115,9 +115,7 @@
     border-color: var(--primary);
   }
 
-  .hero-overlay {
-    background: linear-gradient(135deg, rgba(15, 20, 25, 0.4) 0%, rgba(26, 32, 44, 0.5) 50%, rgba(15, 20, 25, 0.4) 100%);
-  }
+
 
   .mazda-inspired-bg {
     background: radial-gradient(ellipse at center, rgba(220, 38, 38, 0.1) 0%, rgba(15, 20, 25, 1) 70%);
