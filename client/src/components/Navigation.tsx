@@ -16,63 +16,63 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 w-full z-50 glass-effect border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <h1 className="text-2xl font-bold metallic-gradient">
-                <i className="fas fa-car text-primary mr-2"></i>CARSPAIN
+              <h1 className="text-3xl bold-impact metallic-gradient tracking-tight">
+                <i className="fas fa-car text-primary mr-3"></i>CARSPAIN
               </h1>
             </div>
           </div>
           
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+            <div className="ml-10 flex items-baseline space-x-10">
               <button 
                 onClick={() => scrollToSection('home')} 
-                className="text-foreground hover:text-primary transition-colors"
+                className="premium-text text-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase"
                 data-testid="nav-home"
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection('categories')} 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase"
                 data-testid="nav-categories"
               >
-                Categories
+                Discover
               </button>
               <button 
                 onClick={() => scrollToSection('about')} 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase"
                 data-testid="nav-about"
               >
-                About
+                Heritage
               </button>
               <button 
                 onClick={() => scrollToSection('contact')} 
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase"
                 data-testid="nav-contact"
               >
-                Contact
+                Connect
               </button>
             </div>
           </div>
 
           <div className="hidden md:block">
             <button 
-              className="chrome-button font-semibold py-2 px-6 rounded-lg" 
+              className="chrome-button font-semibold py-3 px-8 rounded-xl uppercase tracking-wide text-sm" 
               onClick={handleShopRedirect}
               data-testid="button-shop-parts"
             >
-              Shop Car Parts
+              Shop Parts
             </button>
           </div>
 
           <div className="md:hidden">
             <button 
-              className="text-foreground hover:text-primary" 
+              className="text-foreground hover:text-primary transition-colors" 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="button-mobile-menu"
             >
@@ -83,42 +83,42 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="md:hidden border-t border-border/50 glass-effect">
+            <div className="px-2 pt-4 pb-4 space-y-2">
               <button 
                 onClick={() => { scrollToSection('home'); setIsMobileMenuOpen(false); }} 
-                className="block px-3 py-2 text-foreground hover:text-primary transition-colors w-full text-left"
+                className="block px-4 py-3 premium-text text-foreground hover:text-primary transition-colors w-full text-left uppercase tracking-wide"
                 data-testid="mobile-nav-home"
               >
                 Home
               </button>
               <button 
                 onClick={() => { scrollToSection('categories'); setIsMobileMenuOpen(false); }} 
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
+                className="block px-4 py-3 premium-text text-muted-foreground hover:text-primary transition-colors w-full text-left uppercase tracking-wide"
                 data-testid="mobile-nav-categories"
               >
-                Categories
+                Discover
               </button>
               <button 
                 onClick={() => { scrollToSection('about'); setIsMobileMenuOpen(false); }} 
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
+                className="block px-4 py-3 premium-text text-muted-foreground hover:text-primary transition-colors w-full text-left uppercase tracking-wide"
                 data-testid="mobile-nav-about"
               >
-                About
+                Heritage
               </button>
               <button 
                 onClick={() => { scrollToSection('contact'); setIsMobileMenuOpen(false); }} 
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors w-full text-left"
+                className="block px-4 py-3 premium-text text-muted-foreground hover:text-primary transition-colors w-full text-left uppercase tracking-wide"
                 data-testid="mobile-nav-contact"
               >
-                Contact
+                Connect
               </button>
               <button 
-                className="chrome-button font-semibold py-2 px-6 rounded-lg mx-3 mt-2" 
+                className="chrome-button font-semibold py-3 px-6 rounded-xl mx-4 mt-4 uppercase tracking-wide text-sm" 
                 onClick={handleShopRedirect}
                 data-testid="mobile-button-shop-parts"
               >
-                Shop Car Parts
+                Shop Parts
               </button>
             </div>
           </div>

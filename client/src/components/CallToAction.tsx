@@ -10,41 +10,54 @@ export default function CallToAction() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-r from-primary to-blue-600 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10">
+    <section className="py-24 bg-gradient-to-br from-primary via-red-600 to-red-700 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-20">
         <img 
-          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" 
-          alt="Luxury car details showcasing premium automotive engineering" 
+          src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" 
+          alt="High-performance sports car showcasing automotive excellence" 
           className="w-full h-full object-cover" 
         />
       </div>
       
+      {/* Abstract geometric pattern overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 left-20 w-32 h-32 border-2 border-white rotate-45"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-white rotate-12"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/10 rounded-full"></div>
+      </div>
+      
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
-          Ready to Upgrade Your Vehicle?
+        <div className="premium-text text-white/90 text-lg mb-6 tracking-wider uppercase">
+          Your Journey Begins Here
+        </div>
+        
+        <h2 className="text-5xl md:text-7xl bold-impact text-white mb-8 leading-tight">
+          UNLEASH YOUR<br />
+          AUTOMOTIVE POTENTIAL
         </h2>
-        <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-          Browse our extensive catalog of premium car parts and accessories. 
-          Find exactly what you need to enhance your vehicle's performance.
+        
+        <p className="text-xl md:text-2xl premium-text text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
+          Step into a world where performance meets precision. Discover components that don't just fit your vehicle—
+          they transform your entire driving experience into something extraordinary.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <button 
-            className="bg-white text-primary font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-3"
+            className="bg-white text-primary font-bold py-5 px-10 rounded-xl text-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-3 uppercase tracking-wide shadow-xl"
             onClick={handleStartShopping}
             data-testid="button-start-shopping"
           >
             <i className="fas fa-shopping-cart"></i>
-            Start Shopping Now
+            Begin Your Journey
           </button>
           
           <button 
-            className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 flex items-center gap-3"
+            className="glass-effect border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-5 px-10 rounded-xl text-lg transition-all duration-300 flex items-center gap-3 uppercase tracking-wide"
             onClick={handleCallPhone}
             data-testid="button-call-phone"
           >
             <i className="fas fa-phone"></i>
-            Call: (555) 123-4567
+            Connect: (555) 123-4567
           </button>
         </div>
       </div>

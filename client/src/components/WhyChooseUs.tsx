@@ -18,14 +18,21 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-24 bg-background relative">
+      {/* Section divider */}
+      <div className="section-divider absolute top-0 left-0 w-full"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why Choose <span className="metallic-gradient">Carspain</span>
+        <div className="text-center mb-20">
+          <div className="premium-text text-primary text-lg mb-4 tracking-wider uppercase">
+            The Carspain Advantage
+          </div>
+          <h2 className="text-5xl md:text-6xl bold-impact mb-6">
+            ENGINEERED FOR <span className="metallic-gradient">EXCELLENCE</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Your trusted partner for premium automotive parts and exceptional service
+          <p className="text-xl premium-text text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Where innovation meets craftsmanship. Our commitment to excellence drives every aspect 
+            of your automotive journey, from selection to satisfaction.
           </p>
         </div>
 
@@ -33,14 +40,14 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="automotive-card rounded-xl p-8 text-center"
+              className="automotive-card rounded-2xl p-10 text-center group"
               data-testid={`feature-card-${index}`}
             >
-              <div className="text-primary text-4xl mb-6">
+              <div className="text-primary text-5xl mb-8 transition-transform duration-300 group-hover:scale-110">
                 <i className={feature.icon}></i>
               </div>
-              <h3 className="text-2xl font-semibold mb-4">{feature.title}</h3>
-              <p className="text-muted-foreground">
+              <h3 className="text-2xl bold-impact mb-6 uppercase tracking-wide">{feature.title}</h3>
+              <p className="premium-text text-muted-foreground leading-relaxed">
                 {feature.description}
               </p>
             </div>

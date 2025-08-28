@@ -19,8 +19,9 @@ export default function Home() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          const element = entry.target as HTMLElement;
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
         }
       });
     }, observerOptions);
@@ -43,13 +44,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
-      <HeroSection />
-      <Categories />
-      <WhyChooseUs />
-      <Testimonials />
-      <About />
-      <CallToAction />
-      <Footer />
+      <div className="pt-20">
+        <HeroSection />
+        <Categories />
+        <WhyChooseUs />
+        <Testimonials />
+        <About />
+        <CallToAction />
+        <Footer />
+      </div>
     </div>
   );
 }

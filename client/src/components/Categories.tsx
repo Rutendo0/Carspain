@@ -45,43 +45,58 @@ export default function Categories() {
   };
 
   return (
-    <section id="categories" className="py-20 bg-muted">
+    <section id="categories" className="py-24 bg-muted relative">
+      {/* Section divider */}
+      <div className="section-divider absolute top-0 left-0 w-full"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Shop by <span className="metallic-gradient">Category</span>
+        <div className="text-center mb-20">
+          <div className="premium-text text-primary text-lg mb-4 tracking-wider uppercase">
+            Performance Categories
+          </div>
+          <h2 className="text-5xl md:text-6xl bold-impact mb-6">
+            DISCOVER YOUR <span className="metallic-gradient">PASSION</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Find the perfect parts for your vehicle from our extensive catalog of premium automotive components
+          <p className="text-xl premium-text text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Each component engineered to perfection. Every part designed to elevate your automotive experience 
+            to extraordinary levels of performance and reliability.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {categories.map((category) => (
             <div 
               key={category.id}
-              className="automotive-card rounded-xl p-6 text-center cursor-pointer"
+              className="automotive-card rounded-2xl p-8 text-center cursor-pointer group overflow-hidden"
               onClick={() => handleCategoryClick(category.id)}
               data-testid={`category-card-${category.id}`}
             >
-              <img 
-                src={category.image}
-                alt={category.alt}
-                className="w-full h-48 object-cover rounded-lg mb-4" 
-              />
-              <div className="text-primary text-3xl mb-4">
+              <div className="relative mb-6 overflow-hidden rounded-xl">
+                <img 
+                  src={category.image}
+                  alt={category.alt}
+                  className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              </div>
+              
+              <div className="text-primary text-4xl mb-4 transition-transform duration-300 group-hover:scale-110">
                 <i className={category.icon}></i>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
-              <p className="text-muted-foreground mb-4">{category.description}</p>
-              <div className="text-primary font-semibold">Shop Now →</div>
+              
+              <h3 className="text-2xl bold-impact mb-3 uppercase tracking-wide">{category.name}</h3>
+              <p className="premium-text text-muted-foreground mb-6 leading-relaxed">{category.description}</p>
+              
+              <div className="text-primary font-semibold uppercase tracking-wider text-sm group-hover:text-foreground transition-colors flex items-center justify-center gap-2">
+                Explore <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center">
           <button 
-            className="chrome-button font-semibold py-3 px-8 rounded-lg text-lg"
+            className="chrome-button font-bold py-4 px-10 rounded-xl text-lg uppercase tracking-wide"
             onClick={handleViewAllCategories}
             data-testid="button-view-all-categories"
           >

@@ -1,10 +1,26 @@
 # Overview
 
-This is a full-stack web application for "Carspain", an automotive parts and accessories e-commerce platform. The application features a modern React frontend with a dark-themed automotive design, built using Vite and styled with TailwindCSS and shadcn/ui components. The backend is an Express.js server with PostgreSQL database integration using Drizzle ORM. The project is structured as a monorepo with shared schema definitions and follows a clean separation between client, server, and shared code.
+This is a full-stack web application for "Carspain", an automotive parts and accessories e-commerce platform. The application features a sophisticated, Mazda-inspired landing website with premium dark automotive design targeting male customers. Built using React with Vite, styled with TailwindCSS and shadcn/ui components, featuring high-quality automotive photography and masculine design elements. The backend is an Express.js server with PostgreSQL database integration using Drizzle ORM.
 
 # User Preferences
 
 Preferred communication style: Simple, everyday language.
+Design inspiration: Mazda websites (mazda.com/en and mazdausa.com) for sophisticated automotive branding.
+
+# Recent Changes (August 28, 2025)
+
+## Design Enhancement - Mazda-Inspired Makeover
+- **Enhanced Visual Identity**: Updated color scheme to use red (#dc2626) as primary color instead of blue
+- **Typography System**: Implemented premium typography with Inter font, including `.premium-text` and `.bold-impact` classes
+- **Sophisticated Navigation**: Redesigned navigation with glass effect, increased height (h-20), and refined typography
+- **Hero Section Transformation**: 
+  - Changed messaging to "ELEVATE YOUR DRIVING EXPERIENCE" with Mazda-style taglines
+  - Added glass effect buttons and premium automotive imagery
+  - Enhanced stats section with glass effect cards
+  - Added scroll indicator with animation
+- **Categories Section**: Upgraded with performance-focused messaging and enhanced card interactions
+- **Component Styling**: Added section dividers, improved hover effects, and sophisticated visual treatments
+- **CSS Utilities**: Added `.glass-effect`, `.mazda-inspired-bg`, `.section-divider` utilities
 
 # System Architecture
 
