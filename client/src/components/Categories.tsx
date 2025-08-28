@@ -52,14 +52,14 @@ export default function Categories() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <div className="premium-text text-primary text-lg mb-4 tracking-wider uppercase">
-            Performance Categories
+            Product Categories
           </div>
           <h2 className="text-5xl md:text-6xl bold-impact mb-6">
-            DISCOVER YOUR <span className="metallic-gradient">PASSION</span>
+            COMPREHENSIVE <span className="metallic-gradient">AUTOMOTIVE SOLUTIONS</span>
           </h2>
           <p className="text-xl premium-text text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Each component engineered to perfection. Every part designed to elevate your automotive experience 
-            to extraordinary levels of performance and reliability.
+            Extensive inventory of premium automotive components from leading manufacturers. 
+            Professional-grade parts engineered for superior performance, durability, and reliability.
           </p>
         </div>
 

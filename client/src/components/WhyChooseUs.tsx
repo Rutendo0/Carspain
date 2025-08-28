@@ -25,14 +25,14 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <div className="premium-text text-primary text-lg mb-4 tracking-wider uppercase">
-            The Carspain Advantage
+            Industry Leadership
           </div>
           <h2 className="text-5xl md:text-6xl bold-impact mb-6">
-            ENGINEERED FOR <span className="metallic-gradient">EXCELLENCE</span>
+            TRUSTED BY <span className="metallic-gradient">PROFESSIONALS</span>
           </h2>
           <p className="text-xl premium-text text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Where innovation meets craftsmanship. Our commitment to excellence drives every aspect 
-            of your automotive journey, from selection to satisfaction.
+            Over a decade of excellence in automotive parts distribution. Our commitment to quality, 
+            service, and customer satisfaction has established us as a leader in the industry.
           </p>
         </div>
 

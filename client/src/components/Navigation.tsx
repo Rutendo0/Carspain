@@ -16,7 +16,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass-effect border-b border-border/50">
+    <nav className="fixed top-0 w-full z-50 bg-background/95 border-b border-border/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
@@ -83,7 +83,7 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-border/50 glass-effect">
+          <div className="md:hidden border-t border-border/50 bg-background/95">
             <div className="px-2 pt-4 pb-4 space-y-2">
               <button 
                 onClick={() => { scrollToSection('home'); setIsMobileMenuOpen(false); }} 

@@ -22,19 +22,19 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Mazda-inspired tagline */}
+        {/* Professional tagline */}
         <div className="premium-text text-primary text-lg mb-4 tracking-wider uppercase">
-          Where Performance Meets Precision
+          Premium Automotive Solutions
         </div>
         
         <h1 className="text-6xl md:text-8xl bold-impact mb-6 leading-tight">
-          ELEVATE YOUR<br />
-          <span className="metallic-gradient">DRIVING EXPERIENCE</span>
+          PROFESSIONAL GRADE<br />
+          <span className="metallic-gradient">AUTOMOTIVE PARTS</span>
         </h1>
         
         <p className="text-xl md:text-2xl premium-text text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-          Discover premium automotive parts crafted for enthusiasts who demand excellence. 
-          From high-performance engines to precision-engineered components—experience the difference quality makes.
+          Leading supplier of high-performance automotive components and accessories. 
+          Trusted by professionals and enthusiasts worldwide for quality, reliability, and exceptional service.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -44,7 +44,7 @@ export default function HeroSection() {
             data-testid="button-shop-now"
           >
             <i className="fas fa-shopping-cart"></i>
-            Discover Parts
+            Browse Catalog
           </button>
           
           <button 
@@ -53,7 +53,7 @@ export default function HeroSection() {
             data-testid="button-watch-demo"
           >
             <i className="fas fa-play-circle text-primary"></i>
-            Watch Story
+            Learn More
           </button>
         </div>
 

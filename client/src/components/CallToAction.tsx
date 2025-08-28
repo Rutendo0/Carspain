@@ -28,17 +28,17 @@ export default function CallToAction() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="premium-text text-white/90 text-lg mb-6 tracking-wider uppercase">
-          Your Journey Begins Here
+          Ready to Get Started?
         </div>
         
         <h2 className="text-5xl md:text-7xl bold-impact text-white mb-8 leading-tight">
-          UNLEASH YOUR<br />
-          AUTOMOTIVE POTENTIAL
+          EXPERIENCE<br />
+          PROFESSIONAL SERVICE
         </h2>
         
         <p className="text-xl md:text-2xl premium-text text-white/90 mb-12 max-w-4xl mx-auto leading-relaxed">
-          Step into a world where performance meets precision. Discover components that don't just fit your vehicle—
-          they transform your entire driving experience into something extraordinary.
+          Partner with the leading automotive parts supplier. Our comprehensive catalog and expert support 
+          ensure you get the right components for your specific requirements.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -48,7 +48,7 @@ export default function CallToAction() {
             data-testid="button-start-shopping"
           >
             <i className="fas fa-shopping-cart"></i>
-            Begin Your Journey
+            Shop Now
           </button>
           
           <button 
@@ -57,7 +57,7 @@ export default function CallToAction() {
             data-testid="button-call-phone"
           >
             <i className="fas fa-phone"></i>
-            Connect: (555) 123-4567
+            Contact Sales: (555) 123-4567
           </button>
         </div>
       </div>
