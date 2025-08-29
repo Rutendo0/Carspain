@@ -64,10 +64,11 @@ export default function Categories() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <div 
               key={category.id}
-              className="automotive-card rounded-2xl p-8 text-center cursor-pointer group overflow-hidden"
+              className="automotive-card rounded-2xl p-8 text-center cursor-pointer group overflow-hidden fade-in"
+              style={{animationDelay: `${0.2 + index * 0.1}s`}}
               onClick={() => handleCategoryClick(category.id)}
               data-testid={`category-card-${category.id}`}
             >
@@ -86,8 +87,10 @@ export default function Categories() {
               <h3 className="text-2xl font-heading font-bold mb-3 uppercase tracking-wide text-foreground">{category.name}</h3>
               <p className="premium-text text-muted-foreground mb-6 leading-relaxed">{category.description}</p>
               
-              <div className="text-primary font-semibold uppercase tracking-wider text-sm group-hover:text-foreground transition-colors flex items-center justify-center gap-2">
-                Explore <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+              <div className="text-primary font-semibold uppercase tracking-wider text-sm group-hover:text-foreground transition-colors flex items-center justify-center gap-2 relative overflow-hidden">
+                <span className="relative z-10">Explore</span>
+                <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform relative z-10"></i>
+                <div className="absolute inset-0 bg-primary/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300"></div>
               </div>
             </div>
           ))}

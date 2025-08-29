@@ -41,22 +41,22 @@ export default function CallToAction() {
           ensure you get the right components for your specific requirements.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center slide-up" style={{animationDelay: '0.4s'}}>
           <button 
-            className="bg-white text-primary font-bold py-5 px-10 rounded-xl text-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-3 uppercase tracking-wide shadow-xl"
+            className="bg-white text-primary font-bold py-5 px-10 rounded-xl text-lg hover:bg-gray-100 transition-all duration-300 flex items-center gap-3 uppercase tracking-wide shadow-xl hover:shadow-2xl hover:scale-105 group"
             onClick={handleStartShopping}
             data-testid="button-start-shopping"
           >
-            <i className="fas fa-shopping-cart"></i>
+            <i className="fas fa-shopping-cart group-hover:animate-pulse"></i>
             Shop Now
           </button>
           
           <button 
-            className="glass-effect border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-5 px-10 rounded-xl text-lg transition-all duration-300 flex items-center gap-3 uppercase tracking-wide"
+            className="glass-effect border-2 border-white text-white hover:bg-white hover:text-primary font-semibold py-5 px-10 rounded-xl text-lg transition-all duration-300 flex items-center gap-3 uppercase tracking-wide hover:scale-105 group"
             onClick={handleCallPhone}
             data-testid="button-call-phone"
           >
-            <i className="fas fa-phone"></i>
+            <i className="fas fa-phone group-hover:animate-bounce"></i>
             Contact Sales: (555) 123-4567
           </button>
         </div>

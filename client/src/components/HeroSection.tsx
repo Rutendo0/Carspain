@@ -20,23 +20,23 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-black/20 backdrop-blur-none rounded-3xl py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-black/20 backdrop-blur-none rounded-3xl py-20 fade-in">
         {/* Professional tagline */}
-        <div className="professional-subtitle text-lg mb-6">
+        <div className="professional-subtitle text-lg mb-6 slide-up" style={{animationDelay: '0.2s'}}>
           Premium Automotive Solutions
         </div>
         
-        <h1 className="text-6xl md:text-8xl bold-impact mb-8 leading-tight text-foreground">
+        <h1 className="text-6xl md:text-8xl bold-impact mb-8 leading-tight text-foreground slide-up" style={{animationDelay: '0.4s'}}>
           PROFESSIONAL GRADE<br />
           <span className="metallic-gradient">AUTOMOTIVE PARTS</span>
         </h1>
         
-        <p className="text-xl md:text-2xl premium-text enhanced-text mb-12 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl premium-text enhanced-text mb-12 max-w-4xl mx-auto leading-relaxed slide-up" style={{animationDelay: '0.6s'}}>
           Leading supplier of high-performance automotive components and accessories. 
           Trusted by professionals and enthusiasts worldwide for quality, reliability, and exceptional service.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 slide-up" style={{animationDelay: '0.8s'}}>
           <button 
             className="chrome-button font-bold py-5 px-10 rounded-xl text-lg flex items-center gap-3 uppercase tracking-wide" 
             onClick={handleShopRedirect}
@@ -57,7 +57,7 @@ export default function HeroSection() {
         </div>
 
         {/* Achievement Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto slide-up" style={{animationDelay: '1.0s'}}>
           <div className="text-center glass-effect p-6 rounded-2xl" data-testid="stat-parts">
             <div className="text-4xl md:text-5xl font-bold text-primary mb-2">15K+</div>
             <div className="stats-text uppercase tracking-wider">Premium Parts</div>
@@ -77,10 +77,10 @@ export default function HeroSection() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center">
-          <div className="text-muted-foreground text-sm mb-2 premium-text">Explore Excellence</div>
-          <div className="animate-bounce">
-            <i className="fas fa-chevron-down text-primary text-xl"></i>
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center cursor-pointer group slide-up" style={{animationDelay: '1.2s'}} onClick={() => document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' })}>
+          <div className="text-muted-foreground text-sm mb-2 premium-text group-hover:text-primary transition-colors">Explore Excellence</div>
+          <div className="animate-bounce group-hover:animate-pulse">
+            <i className="fas fa-chevron-down text-primary text-xl group-hover:scale-125 transition-transform"></i>
           </div>
         </div>
       </div>

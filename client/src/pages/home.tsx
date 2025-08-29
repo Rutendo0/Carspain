@@ -7,6 +7,8 @@ import Testimonials from "@/components/Testimonials";
 import About from "@/components/About";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
   useEffect(() => {
@@ -43,6 +45,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <ScrollProgress />
       <Navigation />
       <div className="pt-20">
         <HeroSection />
@@ -53,6 +56,7 @@ export default function Home() {
         <CallToAction />
         <Footer />
       </div>
+      <BackToTop />
     </div>
   );
 }

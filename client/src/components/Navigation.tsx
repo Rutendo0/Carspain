@@ -16,13 +16,13 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/95 border-b border-border/50">
+    <nav className="fixed top-0 w-full z-50 bg-background/95 border-b border-border/50 backdrop-blur-sm transition-all duration-300 hover:bg-background/98">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <h1 className="text-3xl bold-impact metallic-gradient tracking-tight">
-                <i className="fas fa-car text-primary mr-3"></i>CARSPAIN
+            <div className="flex-shrink-0 group">
+              <h1 className="text-3xl bold-impact metallic-gradient tracking-tight group-hover:scale-105 transition-transform cursor-pointer">
+                <i className="fas fa-car text-primary mr-3 group-hover:animate-pulse"></i>CARSPAIN
               </h1>
             </div>
           </div>
@@ -31,31 +31,35 @@ export default function Navigation() {
             <div className="ml-10 flex items-baseline space-x-10">
               <button 
                 onClick={() => scrollToSection('home')} 
-                className="premium-text text-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase"
+                className="premium-text text-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase relative group"
                 data-testid="nav-home"
               >
                 Home
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('categories')} 
-                className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase"
+                className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase relative group"
                 data-testid="nav-categories"
               >
                 Discover
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('about')} 
-                className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase"
+                className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase relative group"
                 data-testid="nav-about"
               >
                 Heritage
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
                 onClick={() => scrollToSection('contact')} 
-                className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase"
+                className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase relative group"
                 data-testid="nav-contact"
               >
                 Connect
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             </div>
           </div>
@@ -72,11 +76,12 @@ export default function Navigation() {
 
           <div className="md:hidden">
             <button 
-              className="text-foreground hover:text-primary transition-colors" 
+              className="text-foreground hover:text-primary transition-all duration-300 p-2 rounded-lg hover:bg-primary/10 group" 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               data-testid="button-mobile-menu"
+              aria-label="Toggle mobile menu"
             >
-              <i className="fas fa-bars text-xl"></i>
+              <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl group-hover:scale-110 transition-transform`}></i>
             </button>
           </div>
         </div>

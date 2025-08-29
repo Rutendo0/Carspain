@@ -40,7 +40,8 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="automotive-card rounded-2xl p-10 text-center group"
+              className="automotive-card rounded-2xl p-10 text-center group fade-in"
+              style={{animationDelay: `${0.3 + index * 0.2}s`}}
               data-testid={`feature-card-${index}`}
             >
               <div className="text-primary text-5xl mb-8 transition-transform duration-300 group-hover:scale-110">
