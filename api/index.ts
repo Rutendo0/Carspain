@@ -1,46 +1,69 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import express from 'express';
-import { registerRoutes } from '../server/routes';
 
-// Create Express app
-const app = express();
-
-// Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-// Add CORS for Vercel
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
-  
-  if (req.method === 'OPTIONS') {
-    res.sendStatus(200);
-    return;
-  }
-  next();
-});
-
-// Initialize routes once
-let routesInitialized = false;
-let server: any = null;
-
-async function initializeRoutes() {
-  if (!routesInitialized) {
-    server = await registerRoutes(app);
-    routesInitialized = true;
-  }
+// Add CORS headers
+function setCorsHeaders(res: VercelResponse) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  setCorsHeaders(res);
+  
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  const { url } = req;
+  const path = url?.replace('/api', '') || '/';
+
   try {
-    await initializeRoutes();
+    // Health check endpoint
+    if (path === '/health' && req.method === 'GET') {
+      return res.json({ 
+        status: "ok", 
+        timestamp: new Date().toISOString(),
+        environment: process.env.NODE_ENV || "production"
+      });
+    }
+
+    // Cars endpoint
+    if (path === '/cars' && req.method === 'GET') {
+      const cars = [
+        {
+          id: 1,
+          name: "BMW X5",
+          category: "SUV",
+          price: 120,
+          image: "/api/placeholder/400/300",
+          features: ["GPS", "Bluetooth", "AC"]
+        },
+        {
+          id: 2,
+          name: "Mercedes C-Class",
+          category: "Sedan",
+          price: 100,
+          image: "/api/placeholder/400/300",
+          features: ["GPS", "Bluetooth", "AC", "Leather Seats"]
+        },
+        {
+          id: 3,
+          name: "Audi A4",
+          category: "Sedan",
+          price: 95,
+          image: "/api/placeholder/400/300",
+          features: ["GPS", "Bluetooth", "AC"]
+        }
+      ];
+      return res.json(cars);
+    }
+
+    // Default 404 for unknown endpoints
+    return res.status(404).json({ error: 'API endpoint not found' });
     
-    // Handle the request with Express
-    app(req as any, res as any);
   } catch (error) {
     console.error('API Error:', error);
-    res.status(500).json({ error: 'Internal Server Error' });
+    return res.status(500).json({ error: 'Internal Server Error' });
   }
 }
