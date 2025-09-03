@@ -1,3 +1,5 @@
+import carPartsBackground from '../assets/Car_parts_background_display_2a8f44a2.png';
+
 export default function HeroSection() {
   const handleShopRedirect = () => {
     // TODO: Implement redirect to shop page
@@ -14,13 +16,13 @@ export default function HeroSection() {
       {/* Modern car engine background */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/attached_assets/generated_images/Car_parts_background_display_2a8f44a2.png" 
+          src={carPartsBackground} 
           alt="Professional car parts and automotive components display" 
           className="w-full h-full object-cover" 
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-black/20 backdrop-blur-none rounded-3xl py-20 fade-in">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-black/10 backdrop-blur-none rounded-3xl py-20 fade-in">
         {/* Professional tagline */}
         <div className="professional-subtitle text-lg mb-6 slide-up" style={{animationDelay: '0.2s'}}>
           Premium Automotive Solutions
