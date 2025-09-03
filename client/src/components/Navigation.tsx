@@ -21,8 +21,8 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0 group">
-              <h1 className="text-3xl bold-impact metallic-gradient tracking-tight group-hover:scale-105 transition-transform cursor-pointer">
-                <i className="fas fa-car text-primary mr-3 group-hover:animate-pulse"></i>CARSPAIN
+              <h1 className="text-2xl bold-impact text-white tracking-tight group-hover:scale-105 transition-transform cursor-pointer">
+                <i className="fas fa-wrench text-green-400 mr-2 group-hover:animate-pulse"></i>CARPARTS<span className="text-green-400">PRO</span>
               </h1>
             </div>
           </div>
@@ -42,7 +42,7 @@ export default function Navigation() {
                 className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase relative group"
                 data-testid="nav-categories"
               >
-                Discover
+                Parts
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
@@ -50,7 +50,7 @@ export default function Navigation() {
                 className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase relative group"
                 data-testid="nav-about"
               >
-                Heritage
+                Services
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
@@ -58,7 +58,7 @@ export default function Navigation() {
                 className="premium-text text-muted-foreground hover:text-primary transition-all duration-300 tracking-wider text-sm uppercase relative group"
                 data-testid="nav-contact"
               >
-                Connect
+                Contact
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </button>
             </div>
@@ -70,7 +70,7 @@ export default function Navigation() {
               onClick={handleShopRedirect}
               data-testid="button-shop-parts"
             >
-              Shop Parts
+              Get Quote
             </button>
           </div>
 
@@ -102,28 +102,28 @@ export default function Navigation() {
                 className="block px-4 py-3 premium-text text-muted-foreground hover:text-primary transition-colors w-full text-left uppercase tracking-wide"
                 data-testid="mobile-nav-categories"
               >
-                Discover
+                Parts
               </button>
               <button 
                 onClick={() => { scrollToSection('about'); setIsMobileMenuOpen(false); }} 
                 className="block px-4 py-3 premium-text text-muted-foreground hover:text-primary transition-colors w-full text-left uppercase tracking-wide"
                 data-testid="mobile-nav-about"
               >
-                Heritage
+                Services
               </button>
               <button 
                 onClick={() => { scrollToSection('contact'); setIsMobileMenuOpen(false); }} 
                 className="block px-4 py-3 premium-text text-muted-foreground hover:text-primary transition-colors w-full text-left uppercase tracking-wide"
                 data-testid="mobile-nav-contact"
               >
-                Connect
+                Contact
               </button>
               <button 
                 className="chrome-button font-semibold py-3 px-6 rounded-xl mx-4 mt-4 uppercase tracking-wide text-sm" 
                 onClick={handleShopRedirect}
                 data-testid="mobile-button-shop-parts"
               >
-                Shop Parts
+                Get Quote
               </button>
             </div>
           </div>
