@@ -22,7 +22,7 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-black/60 backdrop-blur-sm rounded-3xl py-20 fade-in">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 fade-in">
         {/* Professional tagline */}
         <div className="professional-subtitle text-lg mb-6 slide-up" style={{animationDelay: '0.2s'}}>
           PROFESSIONAL CAR PARTS SUPPLIER
