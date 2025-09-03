@@ -14,8 +14,8 @@ export default function HeroSection() {
       {/* Modern car engine background */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" 
-          alt="Luxury sports car showcasing premium automotive engineering" 
+          src="/attached_assets/generated_images/Car_parts_background_display_2a8f44a2.png" 
+          alt="Professional car parts and automotive components display" 
           className="w-full h-full object-cover" 
         />
       </div>
@@ -26,14 +26,14 @@ export default function HeroSection() {
           Premium Automotive Solutions
         </div>
         
-        <h1 className="text-6xl md:text-8xl bold-impact mb-8 leading-tight text-foreground slide-up" style={{animationDelay: '0.4s'}}>
-          PROFESSIONAL GRADE<br />
-          <span className="metallic-gradient">AUTOMOTIVE PARTS</span>
+        <h1 className="text-4xl md:text-6xl bold-impact mb-8 leading-tight text-foreground slide-up" style={{animationDelay: '0.4s'}}>
+          PREMIUM CAR PARTS<br />
+          <span className="metallic-gradient">& ACCESSORIES</span>
         </h1>
         
-        <p className="text-xl md:text-2xl premium-text enhanced-text mb-12 max-w-4xl mx-auto leading-relaxed slide-up" style={{animationDelay: '0.6s'}}>
-          Leading supplier of high-performance automotive components and accessories. 
-          Trusted by professionals and enthusiasts worldwide for quality, reliability, and exceptional service.
+        <p className="text-lg md:text-xl premium-text enhanced-text mb-12 max-w-4xl mx-auto leading-relaxed slide-up" style={{animationDelay: '0.6s'}}>
+          Your trusted source for genuine OEM parts, performance upgrades, and quality accessories. 
+          From engine components to exterior styling - we have everything to keep your vehicle running perfectly.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 slide-up" style={{animationDelay: '0.8s'}}>
