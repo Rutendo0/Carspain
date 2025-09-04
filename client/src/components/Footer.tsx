@@ -25,7 +25,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold metallic-gradient mb-4">
-              <i className="fas fa-car text-primary mr-2"></i>CARSPAIN
+              <i className="fas fa-wrench text-primary mr-2"></i>CAR<span className="text-green-400">SPAIN</span>
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Your premier destination for high-quality automotive parts and accessories. 

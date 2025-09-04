@@ -43,13 +43,25 @@ export default function About() {
           </div>
 
           <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
-              alt="Professional automotive workshop with advanced tools and equipment" 
-              className="rounded-xl shadow-2xl w-full h-auto" 
-            />
+            <div className="grid grid-cols-2 gap-4">
+              <img 
+                src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=800&auto=format&fit=crop" 
+                alt="Automotive workshop" 
+                className="rounded-lg shadow-lg w-full h-56 object-cover" 
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1515923162034-3c1b6c7c9a6c?q=80&w=800&auto=format&fit=crop" 
+                alt="Mechanic working" 
+                className="rounded-lg shadow-lg w-full h-56 object-cover" 
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?q=80&w=800&auto=format&fit=crop" 
+                alt="Engine bay" 
+                className="rounded-lg shadow-lg w-full h-56 object-cover col-span-2" 
+              />
+            </div>
             
-            <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-xl shadow-xl">
+            <div className="absolute -bottom-6 -left-6 bg-green-600 text-white p-6 rounded-xl shadow-xl">
               <div className="text-2xl font-bold">ISO 9001</div>
               <div className="text-sm">Certified Quality</div>
             </div>

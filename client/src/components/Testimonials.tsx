@@ -10,7 +10,7 @@ export default function Testimonials() {
       name: 'Sarah Johnson',
       title: 'Car Enthusiast',
       rating: 5,
-      content: '"Amazing selection and competitive prices. The customer support team helped me find exactly what I needed for my project car. Outstanding service!"'
+      content: '"Amazing selection and expert support. The customer support team helped me find exactly what I needed for my project car. Outstanding service!"'
     },
     {
       name: 'David Chen',
